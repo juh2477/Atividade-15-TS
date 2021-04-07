@@ -1,0 +1,143 @@
+*, * ::before, *::after{
+    box-sizing: border-box;
+    font-family: 'minecraftFont';
+}
+
+@font-face{
+    font-family: 'minecraftFont';
+    src: url('../Src/MinecraftFont.ttf');
+}
+
+@font-face{
+    font-family: 'marioFont';
+    src: url('../Src/marioFont.TTF');
+}
+
+:root{
+    --cor-neutro: 400; 
+    --cor-errado: 0;
+    --cor-correto: 130;
+}
+
+body{
+    --cor: var(--cor-neutro);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    color: hsl(var(--cor), 100%, 50%);
+    justify-content: center;
+    background-color: hsl(var(--cor), 0%, 100%);
+}
+
+body.correto{
+    --cor: var(--cor-correto);
+}
+
+body.errado{
+    --cor: var(--cor-errado);
+}
+
+.quiz{
+    font-family:"marioFont"; 
+    margin-top: 20px;
+    font-size: 32px;
+    position: absolute;
+}
+
+.quiz:hover{
+    border-color: rgb(158, 158, 158);
+}
+  
+.quadrado{
+    width: 50%;
+    max-width: 50%;
+    height: 50%;
+    max-width: 50%;
+    margin-top: 150px;
+    position: relative;
+    background-color: hsl(var(--cor), 100%, 70%);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 30px 2px;
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.btn{
+    --cor: var(--cor-neutro);
+    border: 2px solid hsl(var(--cor), 100%, 40%);
+    background-color: hsl(var(--cor), 100%, 50%);
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: white;
+    outline: none;
+    text-align: center;
+}
+
+.btn:hover{
+    border-color: white;
+}
+
+.btn.correto{
+    --cor: var(--cor-correto);
+    color: hsl(var(--cor), 100%, 20%);
+}
+
+.btn.errado{
+    --cor: var(--cor-errado);
+    color: hsl(var(--cor), 100%, 20%);
+}
+
+.btn-comecar, .btn-proximo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+.btn-comecar{
+    margin-top: 20%;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 5px rgb(158, 158, 158);
+    font-size: 2rem;
+    font-family: 'marioFont';
+}
+
+.btn-comecar:active{
+    --cor: var(--cor-neutro);
+    background-color: hsl(var(--cor), 100%, 40%);
+    box-shadow: 0 2px rgb(158, 158, 158);
+    transform: translate3d(4px, 4px, 4px);
+}
+
+.controles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}    
+
+.pergunta{
+    margin-top: 15%;
+}
+
+.tudo{
+    --cor: var(--cor-neutro);
+    margin-left: 10%;
+    margin-right: 10%;
+    color: hsl(var(--cor), 100%, 50%);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
