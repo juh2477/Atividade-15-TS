@@ -36,7 +36,7 @@ function inserirProximaPergunta(){
 }
 
 function mostrarPergunta(pergunta){
-    perguntaElement.innerText = pergunta.pergunta
+    perguntaElement.innerHTML = pergunta.pergunta
     pergunta.resposta.forEach(resposta => {
         const botao = document.createElement('botao')
         botao.innerText = resposta.text
@@ -106,7 +106,7 @@ function clearStateClass(element){
 
 const perguntas = [
     {
-        pergunta: 'Quanto é 2 + 2?',
+        pergunta: "Quanto é 2+2?",
         resposta:[
             {text: '4', correto: true, audio: audio2},
             {text: '8', correto: false, audio: audio3},
